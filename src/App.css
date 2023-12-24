@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+body, #root {
+  height: 100vh; /* Viewport height to fill the screen */
+  width: 100vw; /* Viewport width to fill the screen */
+  max-width: 100%; /* Prevents any horizontal overflow */
+}
+#root { 
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(35, 26, 70, 1) 0%,
+    rgba(81, 40, 122, 1) 25%,
+    rgba(129, 83, 169, 1) 50%,
+    rgba(186, 155, 194, 1) 75%,
+    rgba(228, 223, 233, 1) 100%
+  ), url('src/assets/IMG_9014.jpg') no-repeat top left fixed;
+  background-size: auto;
+  background-color: #000;
+  min-height: 100vh;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.solid:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 0.5em 1em;
+  display: inline-block;
+  margin-top: 1em;
+  border-radius: 0;
+}
+
+/* Responsive design */
+@media (max-width: 100%) {
+  .logo {
+    height: 4em; /* Smaller logo on mobile */
+  }
+
+  .card {
+    padding: 1em; /* Less padding on mobile */
+  }
+
+  .read-the-docs {
+    font-size: 0.9em; /* Smaller font size on mobile */
+  }
+}
