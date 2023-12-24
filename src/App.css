@@ -6,9 +6,8 @@ html, body {
 
 body, #root {
   height: 100vh; /* Viewport height to fill the screen */
-  position: fixed; /* This prevents scrolling */
-  width: 100%; /* Prevents width from being reduced to content width */
-  overflow-y: hidden; /* Hides vertical scrollbar and prevents vertical scrolling */
+  width: 100vw; /* Viewport width to fill the screen */
+  max-width: 100%; /* Prevents any horizontal overflow */
 }
 #root { 
   max-width: 100%;
@@ -71,39 +70,31 @@ body, #root {
   }
 }
 
-.logo-container {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-
 .logo {
   position: absolute;
-  /* Use a default size or adjust as needed */
-  width: 50px; 
-  height: 50px; 
+  width: 50px; /* Set an appropriate size */
+  height: 50px; /* Set an appropriate size */
 }
 
-.logo img {
-  width: 100%;
-  height: auto;
-}
-
+/* Top-left logo */
 .logo-top-left {
-  top: 10%; /* Adjust based on the exact position you want */
+  top: 10%; /* Adjust these values as needed */
   left: 10%;
 }
 
+/* Top-right logo */
 .logo-top-right {
   top: 10%;
   right: 10%;
 }
 
+/* Bottom-left logo */
 .logo-bottom-left {
   bottom: 10%;
   left: 10%;
 }
 
+/* Bottom-right logo */
 .logo-bottom-right {
   bottom: 10%;
   right: 10%;

@@ -5,6 +5,13 @@ import logo from './assets/C.png'
 import './App.css'
 import backdrop from './assets/tickeris.png'
 
+
+// Lock scroll
+document.body.style.overflow = 'hidden';
+
+// Unlock scroll
+document.body.style.overflow = 'visible';
+
 function App() {
   const [showLinks, setShowLinks] = createSignal(false);
 
