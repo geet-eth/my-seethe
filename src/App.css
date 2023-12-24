@@ -8,6 +8,8 @@ body, #root {
   height: 100vh; /* Viewport height to fill the screen */
   width: 100vw; /* Viewport width to fill the screen */
   max-width: 100%; /* Prevents any horizontal overflow */
+  position: fixed;
+  overflow-y: hidden;
 }
 #root { 
   max-width: 100%;
@@ -72,14 +74,21 @@ body, #root {
 
 .logo {
   position: absolute;
-  width: 50px; /* Set an appropriate size */
-  height: 50px; /* Set an appropriate size */
+  
+}
+.logo img {
+  max-width: 120px; /* Maximum width to ensure logos don't get too large */
+  width: 10vw; /* Width relative to the width of the viewport */
+  height: auto; /* Maintain aspect ratio */
+  width: 100px; /* Fixed width; adjust as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Top-left logo */
 .logo-top-left {
   top: 10%; /* Adjust these values as needed */
   left: 10%;
+  size: 2px,
 }
 
 /* Top-right logo */
