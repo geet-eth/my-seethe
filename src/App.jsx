@@ -3,34 +3,46 @@ import solidLogo from './assets/solid.svg'
 // import viteLogo from '/vite.svg'
 import logo from './assets/C.png'
 import './App.css'
-import backdrop from './assets/IMG_9014.jpg'
+import backdrop from './assets/tickeris.png'
 
 function App() {
-  const [count, setCount] = createSignal(0)
+  const [showLinks, setShowLinks] = createSignal(false);
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://dexscreener.com" target="_blank">
           <img src={logo} class="logo" alt="Vite logo" />
         </a>
       
-      </div>
+      </div> */}
       <div>
         <a>
           <img src={backdrop} class = "backdrop"></img>
         </a>
       </div>
       <h1>$seETHe</h1>
-      <div class="card">
-      <button onClick={() => window.location.href = 'https://telegram.com'}>
-        Go to Telegram
-      </button>
+      <div class="logo-container">
+        <a href="#" class="logo logo-top-left"> {/* Position this logo at the top left */}
+          <img src="path_to_logo" alt="Logo 1" />
+        </a>
+        <a href="#" class="logo logo-top-right"> {/* Position this logo at the top right */}
+          <img src="path_to_logo" alt="Logo 2" />
+        </a>
+        <a href="#" class="logo logo-bottom-left"> {/* Position this logo at the bottom left */}
+          <img src="path_to_logo" alt="Logo 3" />
+        </a>
+        <a href="#" class="logo logo-bottom-right"> {/* Position this logo at the bottom right */}
+          <img src="path_to_logo" alt="Logo 4" />
+        </a>
       </div>
 
-      <p class="read-the-docs">
+    
+     
+
+      {/* <p class="read-the-docs">
       u cant spell SEETHE without ETH
-      </p>
+      </p> */}
     </>
   )
 }
