@@ -5,16 +5,16 @@ html, body {
 }
 
 body, #root {
-  height: 100vh; /* Viewport height to fill the screen */
-  width: 100vw; /* Viewport width to fill the screen */
-  max-width: 100%; /* Prevents any horizontal overflow */
-  position: fixed;
+  /* height: 100vh; Viewport height to fill the screen */
+  /* width: 100vw; Viewport width to fill the screen */
+  /* max-width: 100%; Prevents any horizontal overflow */
+  /* position: fixed; */
   /* overflow-y: hidden; */
 }
 #root { 
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 7%;
+  /* max-width: 100%; */
+  /* margin: 0 auto; */
+  /* padding-top: 7%; */
   text-align: center;
   /* background: linear-gradient(
     135deg,
@@ -31,10 +31,15 @@ body, #root {
     rgba(129, 83, 169, 1) 50%,
     rgba(186, 155, 194, 1) 75%,
     rgba(228, 223, 233, 1) 100%
-  );
-  background-size: auto;
+  ), repeat top left fixed;
+  /* ), repeat ; */
+  /* ); */
+  /* background-size: auto; */
   background-color: #000;
   min-height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
+  width: 100vw;
 }
 
 .logo {
@@ -80,11 +85,11 @@ body, #root {
   }
 }
 
-.logo {
+/* .logo {
   position: absolute;
   
-}
-.logo img {
+} */
+.logo-img {
   max-width: 120px; /* Maximum width to ensure logos don't get too large */
   width: 10vw; /* Width relative to the width of the viewport */
   height: auto; /* Maintain aspect ratio */
@@ -122,3 +127,18 @@ body, #root {
   right: 10%;
 }
 
+
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  /* margin: 5rem auto; */
+  margin: 2rem auto;
+}
+
+.main-container {
+  height: 100%;
+  z-index: 10;
+
+}
