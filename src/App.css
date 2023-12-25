@@ -4,26 +4,8 @@ html, body {
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-body, #root {
-  /* height: 100vh; Viewport height to fill the screen */
-  /* width: 100vw; Viewport width to fill the screen */
-  /* max-width: 100%; Prevents any horizontal overflow */
-  /* position: fixed; */
-  /* overflow-y: hidden; */
-}
 #root { 
-  /* max-width: 100%; */
-  /* margin: 0 auto; */
-  /* padding-top: 7%; */
   text-align: center;
-  /* background: linear-gradient(
-    135deg,
-    rgba(35, 26, 70, 1) 0%,
-    rgba(81, 40, 122, 1) 25%,
-    rgba(129, 83, 169, 1) 50%,
-    rgba(186, 155, 194, 1) 75%,
-    rgba(228, 223, 233, 1) 100%
-  ), url('src/assets/IMG_9014.jpg') no-repeat top left fixed; */
   background: linear-gradient(
     135deg,
     rgba(35, 26, 70, 1) 0%,
@@ -32,14 +14,15 @@ body, #root {
     rgba(186, 155, 194, 1) 75%,
     rgba(228, 223, 233, 1) 100%
   ), repeat top left fixed;
-  /* ), repeat ; */
-  /* ); */
-  /* background-size: auto; */
   background-color: #000;
   min-height: 100vh;
-  /* height: 100vh; */
   height: 100%;
   width: 100vw;
+}
+
+.main-container {
+  height: 100%;
+  z-index: 10;
 }
 
 .logo {
@@ -85,10 +68,6 @@ body, #root {
   }
 }
 
-/* .logo {
-  position: absolute;
-  
-} */
 .logo-img {
   max-width: 120px; /* Maximum width to ensure logos don't get too large */
   width: 10vw; /* Width relative to the width of the viewport */
@@ -97,48 +76,10 @@ body, #root {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Top-left logo */
-.logo-top-left {
-  /* top: 10%; Adjust these values as needed */
-  left: 10%;
-  size: 2px;
-
-
-  @apply top-[40%] sm:top-[10%];
-}
-
-/* Top-right logo */
-.logo-top-right {
-  /* top: 10%; */
-  right: 10%;
-  @apply top-[40%] sm:top-[10%];
-
-}
-
-/* Bottom-left logo */
-.logo-bottom-left {
-  bottom: 10%;
-  left: 10%;
-}
-
-/* Bottom-right logo */
-.logo-bottom-right {
-  bottom: 10%;
-  right: 10%;
-}
-
-
-
 .logo-container {
   display: flex;
   justify-content: space-between;
   width: 90%;
-  /* margin: 5rem auto; */
   margin: 2rem auto;
 }
 
-.main-container {
-  height: 100%;
-  z-index: 10;
-
-}
