@@ -4,17 +4,7 @@ html, body {
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
 
-body, #root {
-  height: 100vh; /* Viewport height to fill the screen */
-  width: 100vw; /* Viewport width to fill the screen */
-  max-width: 100%; /* Prevents any horizontal overflow */
-  position: fixed;
-  overflow-y: hidden;
-}
 #root { 
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 7%;
   text-align: center;
   background: linear-gradient(
     135deg,
@@ -23,10 +13,16 @@ body, #root {
     rgba(129, 83, 169, 1) 50%,
     rgba(186, 155, 194, 1) 75%,
     rgba(228, 223, 233, 1) 100%
-  ), url('src/assets/IMG_9014.jpg') no-repeat top left fixed;
-  background-size: auto;
+  ), repeat top left fixed;
   background-color: #000;
   min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+}
+
+.main-container {
+  height: 100%;
+  z-index: 10;
 }
 
 .logo {
@@ -72,11 +68,7 @@ body, #root {
   }
 }
 
-.logo {
-  position: absolute;
-  
-}
-.logo img {
+.logo-img {
   max-width: 120px; /* Maximum width to ensure logos don't get too large */
   width: 10vw; /* Width relative to the width of the viewport */
   height: auto; /* Maintain aspect ratio */
@@ -84,28 +76,10 @@ body, #root {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Top-left logo */
-.logo-top-left {
-  top: 10%; /* Adjust these values as needed */
-  left: 10%;
-  size: 2px,
-}
-
-/* Top-right logo */
-.logo-top-right {
-  top: 10%;
-  right: 10%;
-}
-
-/* Bottom-left logo */
-.logo-bottom-left {
-  bottom: 10%;
-  left: 10%;
-}
-
-/* Bottom-right logo */
-.logo-bottom-right {
-  bottom: 10%;
-  right: 10%;
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2rem auto;
 }
 
